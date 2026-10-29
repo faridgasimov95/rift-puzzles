@@ -1,4 +1,4 @@
-const games = ["Game one", "Game two", "Game three"];
+const games = ["Champdle", "Rift Links", "Ability Guesser"];
 
 export default function App() {
   return (
