@@ -1,4 +1,11 @@
-const games = ["Champdle", "Rift Links", "Ability Guesser"];
+const games = [
+  "Champdle",
+  "Rift Links",
+  "Ability Guesser",
+  "Sound of the Rift",
+  "The Shopkeeper",
+  "League of Quotes",
+];
 
 export default function App() {
   return (
