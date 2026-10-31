@@ -14,18 +14,23 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
-    errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <HomePage /> },
-      { path: "/champdle", element: <ChampdlePage /> },
       {
-        path: "/riftlinks",
-        element: <RiftLinksPage />,
+        errorElement: <ErrorPage />,
+        children: [
+          { index: true, element: <HomePage /> },
+          { path: "champdle", element: <ChampdlePage /> },
+          {
+            path: "riftlinks",
+            element: <RiftLinksPage />,
+          },
+          { path: "ability", element: <AbilityGuesserPage /> },
+          { path: "riftsound", element: <RiftSoundPage /> },
+          { path: "shopkeeper", element: <ShopkeeperPage /> },
+          { path: "quotes", element: <QuotesPage /> },
+        ],
       },
-      { path: "/ability", element: <AbilityGuesserPage /> },
-      { path: "/riftsound", element: <RiftSoundPage /> },
-      { path: "/shopkeeper", element: <ShopkeeperPage /> },
-      { path: "/quotes", element: <QuotesPage /> },
+      { path: "*", element: <ErrorPage /> },
     ],
   },
 ]);
