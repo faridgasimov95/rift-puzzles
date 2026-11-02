@@ -1,5 +1,7 @@
+import ComingSoon from "../components/ComingSoon";
+
 function ChampdlePage() {
-  return <div>Comming Soon!</div>;
+  return <ComingSoon />;
 }
 
 export default ChampdlePage;

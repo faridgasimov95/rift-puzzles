@@ -1,5 +1,7 @@
+import ComingSoon from "../components/ComingSoon";
+
 function RiftLinksPage() {
-  return <div>Comming Soon!</div>;
+  return <ComingSoon />;
 }
 
 export default RiftLinksPage;

@@ -1,5 +1,7 @@
+import ComingSoon from "../components/ComingSoon";
+
 function RiftSoundPage() {
-  return <div>Comming Soon!</div>;
+  return <ComingSoon />;
 }
 
 export default RiftSoundPage;

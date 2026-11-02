@@ -1,5 +1,7 @@
+import ComingSoon from "../components/ComingSoon";
+
 function QuotesPage() {
-  return <div>Comming Soon!</div>;
+  return <ComingSoon />;
 }
 
 export default QuotesPage;
