@@ -4,12 +4,12 @@
   --color-hex-950: #010a13;
   --color-hex-900: #0a1428;
   --color-hex-800: #1e2328;
-  --color-gold-300: #f0e6d2;
-  --color-gold-500: #c8aa6e;
-  --color-gold-700: #785a28;
+  --color-gold-light: #f0e6d2;
+  --color-gold: #c8aa6e;
+  --color-gold-dark: #785a28;
   --color-hextech: #0ac8b9;
 }
 
 body {
-  @apply bg-hex-950 text-gold-300 antialiased;
+  @apply bg-hex-950 text-gold-light antialiased;
 }
