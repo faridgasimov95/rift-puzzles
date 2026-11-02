@@ -14,7 +14,7 @@ export default function ComingSoon() {
         <h1 className="text-3xl font-extrabold tracking-wider text-gold-50 uppercase mb-2">
           Coming Soon
         </h1>
-        <div className="h-0.5 w-24 bg-linear-to-rfrom-transparent via-gold to-transparent mx-auto mb-4" />
+        <div className="h-0.5 w-24 bg-linear-to-r from-transparent via-gold to-transparent mx-auto mb-4" />
 
         <p className="text-gray-300 text-sm leading-relaxed mb-6">
           Our Hextech engineers are crafting new puzzles. Prepare your League
