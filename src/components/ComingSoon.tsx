@@ -21,9 +21,7 @@ export default function ComingSoon() {
           knowledge!
         </p>
 
-        <HextechButton onClick={() => (window.location.href = "/")}>
-          Back to Puzzles
-        </HextechButton>
+        <HextechButton to="/">Return Home</HextechButton>
       </HextechFrame>
     </div>
   );

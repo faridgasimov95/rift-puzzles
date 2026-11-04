@@ -20,9 +20,7 @@ export default function ErrorPage() {
           The page you are looking for has teleported out or never existed.
         </p>
 
-        <HextechButton onClick={() => (window.location.href = "/")}>
-          Return to Hub
-        </HextechButton>
+        <HextechButton to="/">Return Home</HextechButton>
       </HextechFrame>
     </div>
   );
