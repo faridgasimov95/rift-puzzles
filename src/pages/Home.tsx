@@ -9,7 +9,7 @@ const games = [
 
 function HomePage() {
   return (
-    <div className="min-h-screen bg-linear-to-b from-hex-900 to-hex-950">
+    <div className="h-full bg-linear-to-b from-hex-900 to-hex-950">
       <main className="mx-auto max-w-3xl px-5 py-12">
         <header className="border-b-2 border-gold pb-4">
           <h1 className="text-4xl font-bold tracking-wide text-gold">

@@ -3,7 +3,7 @@ import HextechFrame from "../components/HextechFrame";
 
 export default function ErrorPage() {
   return (
-    <div className="min-h-screen bg-[#091428] text-white flex items-center justify-center p-4 relative overflow-hidden font-sans">
+    <div className="h-full bg-[#091428] text-white flex items-center justify-center p-4 relative overflow-hidden font-sans">
       <div className="absolute w-96 h-96 bg-hextech/10 rounded-full blur-3xl pointer-events-none" />
 
       <HextechFrame className="max-w-md w-full text-center relative z-10">
