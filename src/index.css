@@ -11,5 +11,5 @@
 }
 
 body {
-  @apply bg-hex-950 text-gold-light antialiased;
+  @apply bg-hex-900 text-gold-light antialiased;
 }
