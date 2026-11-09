@@ -9,6 +9,7 @@ import ShopkeeperPage from "./pages/Shopkeepere";
 import QuotesPage from "./pages/Quotes";
 import HomePage from "./pages/Home";
 import { RouterProvider } from "react-router/dom";
+import NotFoundPage from "./pages/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
           { path: "quotes", element: <QuotesPage /> },
         ],
       },
-      { path: "*", element: <ErrorPage /> },
+      { path: "*", element: <NotFoundPage /> },
     ],
   },
 ]);

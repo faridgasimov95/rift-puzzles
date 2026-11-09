@@ -1,7 +1,7 @@
 import ComingSoon from "../components/ComingSoon";
 
 function AbilityGuesserPage() {
-  return <ComingSoon />;
+  return <ComingSoon gameName="Ability Guesser" />;
 }
 
 export default AbilityGuesserPage;

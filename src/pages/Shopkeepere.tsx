@@ -1,7 +1,7 @@
 import ComingSoon from "../components/ComingSoon";
 
 function ShopkeeperPage() {
-  return <ComingSoon />;
+  return <ComingSoon gameName="Shopkeeper" />;
 }
 
 export default ShopkeeperPage;
