@@ -1,7 +1,7 @@
 import ComingSoon from "../components/ComingSoon";
 
 function QuotesPage() {
-  return <ComingSoon gameName="Quotes" />;
+  return <ComingSoon gameName="League of Quotes" />;
 }
 
 export default QuotesPage;

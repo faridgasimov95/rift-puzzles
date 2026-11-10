@@ -1,11 +1,5 @@
-const games = [
-  "Champdle",
-  "Rift Links",
-  "Ability Guesser",
-  "Sound of the Rift",
-  "The Shopkeeper",
-  "League of Quotes",
-];
+import { Link } from "react-router";
+import games from "../games";
 
 function HomePage() {
   return (
@@ -19,14 +13,17 @@ function HomePage() {
         </header>
 
         <section className="mt-8 grid gap-4 sm:grid-cols-3">
-          {games.map((name) => (
-            <button
-              key={name}
+          {games.map((game) => (
+            <Link
+              to={game.path}
+              key={game.path}
               className="rounded-sm border border-gold-dark bg-hex-800 p-5 text-left transition hover:border-hextech hover:text-hextech focus-visible:outline-2 focus-visible:outline-hextech"
             >
-              <span className="block text-lg font-semibold">{name}</span>
-              <span className="text-sm text-gold-light/60">Coming soon</span>
-            </button>
+              <span className="block text-lg font-semibold">{game.name}</span>
+              <span className="text-sm text-gold-light/60">
+                {game.description}
+              </span>
+            </Link>
           ))}
         </section>
       </main>
