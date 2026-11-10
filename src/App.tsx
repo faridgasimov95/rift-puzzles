@@ -1,15 +1,15 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, type RouteObject } from "react-router";
 import RootLayout from "./pages/Root";
 import ErrorPage from "./pages/Error";
-import ChampdlePage from "./pages/Champdle";
-import RiftLinksPage from "./pages/RiftLinks";
-import AbilityGuesserPage from "./pages/AbilityGuesser";
-import RiftSoundPage from "./pages/RiftSound";
-import ShopkeeperPage from "./pages/Shopkeeper";
-import QuotesPage from "./pages/Quotes";
 import HomePage from "./pages/Home";
 import { RouterProvider } from "react-router/dom";
 import NotFoundPage from "./pages/NotFound";
+import { games } from "./games";
+
+const gameRoutes: RouteObject[] = games.map((game) => ({
+  path: game.path,
+  Component: game.component,
+}));
 
 const router = createBrowserRouter([
   {
@@ -18,18 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         errorElement: <ErrorPage />,
-        children: [
-          { index: true, element: <HomePage /> },
-          { path: "champdle", element: <ChampdlePage /> },
-          {
-            path: "rift-links",
-            element: <RiftLinksPage />,
-          },
-          { path: "ability-guesser", element: <AbilityGuesserPage /> },
-          { path: "rift-sound", element: <RiftSoundPage /> },
-          { path: "shopkeeper", element: <ShopkeeperPage /> },
-          { path: "quotes", element: <QuotesPage /> },
-        ],
+        children: [{ index: true, element: <HomePage /> }, ...gameRoutes],
       },
       { path: "*", element: <NotFoundPage /> },
     ],
