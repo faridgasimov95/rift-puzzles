@@ -5,7 +5,7 @@ import ChampdlePage from "./pages/Champdle";
 import RiftLinksPage from "./pages/RiftLinks";
 import AbilityGuesserPage from "./pages/AbilityGuesser";
 import RiftSoundPage from "./pages/RiftSound";
-import ShopkeeperPage from "./pages/Shopkeepere";
+import ShopkeeperPage from "./pages/Shopkeeper";
 import QuotesPage from "./pages/Quotes";
 import HomePage from "./pages/Home";
 import { RouterProvider } from "react-router/dom";

@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import games from "../games";
+import { games } from "../games";
 
 function HomePage() {
   return (
