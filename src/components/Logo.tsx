@@ -2,14 +2,7 @@ export default function Logo() {
   return (
     <svg viewBox="0 0 100 100" fill="none" className="w-12 h-12 m-1">
       <defs>
-        <linearGradient
-          id="gold"
-          x1="0"
-          y1="0"
-          x2="100"
-          y2="100"
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0%" stopColor="var(--color-gold-light, #f0e6d2)" />
           <stop offset="50%" stopColor="var(--color-gold, #c8aa6e)" />
           <stop offset="100%" stopColor="var(--color-gold-dark, #785a28)" />
