@@ -1,12 +1,16 @@
+import { useId } from "react";
+
 type LogoProps = {
   className: string;
 };
 
 export default function Logo({ className }: LogoProps) {
+  const gradientId = useId().replace(/[^a-zA-Z0-9]/g, "");
+
   return (
     <svg viewBox="0 0 100 100" fill="none" className={className}>
       <defs>
-        <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+        <linearGradient id={gradientId} x1="0" y1="0" x2="1" y2="1">
           <stop
             offset="0%"
             style={{ stopColor: "var(--color-gold-light, #f0e6d2)" }}
@@ -25,7 +29,7 @@ export default function Logo({ className }: LogoProps) {
       <polygon
         points="50,8 87,29 87,71 50,92 13,71 13,29"
         className="fill-hex-950"
-        stroke="url(#gold)"
+        stroke={`url(#${gradientId})`}
         strokeWidth="3"
       />
 
