@@ -1,13 +1,13 @@
 export default function Logo() {
   return (
-    <svg viewBox="0 0 200 200" fill="none" className="w-12 h-12 m-1">
+    <svg viewBox="0 0 100 100" fill="none" className="w-12 h-12 m-1">
       <defs>
         <linearGradient
           id="gold"
           x1="0"
           y1="0"
-          x2="200"
-          y2="200"
+          x2="100"
+          y2="100"
           gradientUnits="userSpaceOnUse"
         >
           <stop offset="0%" stopColor="var(--color-gold-light, #f0e6d2)" />
@@ -17,14 +17,14 @@ export default function Logo() {
       </defs>
 
       <polygon
-        points="100,16 174,58 174,142 100,184 26,142 26,58"
+        points="50,8 87,29 87,71 50,92 13,71 13,29"
         fill="var(--color-hex-950, #010a13)"
         stroke="url(#gold)"
-        strokeWidth="6"
+        strokeWidth="3"
       />
 
       <polygon
-        points="100,64 132,100 100,136 68,100"
+        points="50,32 66,50 50,68 34,50"
         fill="var(--color-hextech, #0ac8b9)"
       />
     </svg>
