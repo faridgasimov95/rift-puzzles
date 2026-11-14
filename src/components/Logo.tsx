@@ -1,6 +1,10 @@
-export default function Logo() {
+type LogoProps = {
+  className: string;
+};
+
+export default function Logo({ className }: LogoProps) {
   return (
-    <svg viewBox="0 0 100 100" fill="none" className="w-12 h-12 m-1">
+    <svg viewBox="0 0 100 100" fill="none" className={className}>
       <defs>
         <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
           <stop
