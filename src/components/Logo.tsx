@@ -20,15 +20,12 @@ export default function Logo() {
 
       <polygon
         points="50,8 87,29 87,71 50,92 13,71 13,29"
-        fill="var(--color-hex-950, #010a13)"
+        className="fill-hex-950"
         stroke="url(#gold)"
         strokeWidth="3"
       />
 
-      <polygon
-        points="50,32 66,50 50,68 34,50"
-        fill="var(--color-hextech, #0ac8b9)"
-      />
+      <polygon points="50,32 66,50 50,68 34,50" className="fill-hextech" />
     </svg>
   );
 }
