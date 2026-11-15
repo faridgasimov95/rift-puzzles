@@ -1,14 +1,19 @@
 import { useId } from "react";
 
 type LogoProps = {
-  className: string;
+  className?: string;
 };
 
 export default function Logo({ className }: LogoProps) {
   const gradientId = useId().replace(/[^a-zA-Z0-9]/g, "");
 
   return (
-    <svg viewBox="0 0 100 100" fill="none" className={className}>
+    <svg
+      viewBox="0 0 100 100"
+      fill="none"
+      className={className}
+      aria-hidden="true"
+    >
       <defs>
         <linearGradient id={gradientId} x1="0" y1="0" x2="1" y2="1">
           <stop
@@ -42,7 +47,7 @@ export default function Logo({ className }: LogoProps) {
 
       <polygon
         points="50,21 75.1,35.5 75.1,64.5 50,79 24.9,64.5 24.9,35.5"
-        className="stroke-gold"
+        className="stroke-gold-dark"
         strokeWidth={1.5}
       />
 
