@@ -33,6 +33,62 @@ export default function Logo({ className }: LogoProps) {
         strokeWidth="3"
       />
 
+      <polygon
+        points="50,17 78.6,33.5 78.6,66.5 50,83 21.4,66.5 21.4,33.5"
+        strokeDasharray="3 4"
+        className="stroke-hextech"
+        strokeWidth={1.5}
+      />
+
+      <polygon
+        points="50,21 75.1,35.5 75.1,64.5 50,79 24.9,64.5 24.9,35.5"
+        className="stroke-gold"
+        strokeWidth={1.5}
+      />
+
+      <circle
+        cx="50"
+        cy="8"
+        r="3"
+        className=" fill-gold-light"
+        strokeWidth="1"
+      />
+      <circle
+        cx="87"
+        cy="29"
+        r="3"
+        className=" fill-gold-light"
+        strokeWidth="1"
+      />
+      <circle
+        cx="87"
+        cy="71"
+        r="3"
+        className=" fill-gold-light"
+        strokeWidth="1"
+      />
+      <circle
+        cx="50"
+        cy="92"
+        r="3"
+        className=" fill-gold-light"
+        strokeWidth="1"
+      />
+      <circle
+        cx="13"
+        cy="71"
+        r="3"
+        className=" fill-gold-light"
+        strokeWidth="1"
+      />
+      <circle
+        cx="13"
+        cy="29"
+        r="3"
+        className=" fill-gold-light"
+        strokeWidth="1"
+      />
+
       <polygon points="50,32 66,50 50,68 34,50" className="fill-hextech" />
     </svg>
   );
