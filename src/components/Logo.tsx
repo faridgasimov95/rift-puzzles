@@ -5,7 +5,10 @@ type LogoProps = {
 };
 
 export default function Logo({ className }: LogoProps) {
-  const gradientId = useId().replace(/[^a-zA-Z0-9]/g, "");
+  const baseId = useId().replace(/[^a-zA-Z0-9]/g, "");
+  const goldId = `${baseId}-gold`;
+  const hextechId = `${baseId}-hextech`;
+  const glowId = `${baseId}-glow`;
 
   return (
     <svg
@@ -15,7 +18,7 @@ export default function Logo({ className }: LogoProps) {
       aria-hidden="true"
     >
       <defs>
-        <linearGradient id={gradientId} x1="0" y1="0" x2="1" y2="1">
+        <linearGradient id={goldId} x1="0" y1="0" x2="1" y2="1">
           <stop
             offset="0%"
             style={{ stopColor: "var(--color-gold-light, #f0e6d2)" }}
@@ -29,12 +32,31 @@ export default function Logo({ className }: LogoProps) {
             style={{ stopColor: "var(--color-gold-dark, #785a28)" }}
           />
         </linearGradient>
+
+        <linearGradient id={hextechId} x1="0" y1="0" x2="0" y2="1">
+          <stop
+            offset="0%"
+            style={{ stopColor: "var(--color-hextech-light, #5ff2e6)" }}
+          />
+          <stop
+            offset="50%"
+            style={{ stopColor: "var(--color-hextech, #0ac8b9)" }}
+          />
+          <stop
+            offset="100%"
+            style={{ stopColor: "var(--color-hextech-dark, #0a8f86)" }}
+          />
+        </linearGradient>
+
+        <filter id={glowId} x="-100%" y="-100%" width="300%" height="300%">
+          <feGaussianBlur stdDeviation="6.5" />
+        </filter>
       </defs>
 
       <polygon
         points="50,8 87,29 87,71 50,92 13,71 13,29"
         className="fill-hex-950"
-        stroke={`url(#${gradientId})`}
+        stroke={`url(#${goldId})`}
         strokeWidth="3"
       />
 
@@ -94,7 +116,15 @@ export default function Logo({ className }: LogoProps) {
         strokeWidth="1"
       />
 
-      <polygon points="50,32 66,50 50,68 34,50" className="fill-hextech" />
+      <circle
+        cx="50"
+        cy="50"
+        r="18"
+        className="fill-hextech"
+        filter={`url(#${glowId})`}
+      ></circle>
+      <polygon points="50,32 66,50 50,68 34,50" fill={`url(#${hextechId})`} />
+      <polygon points="50,32 66,50 50,50" className="fill-hextech-light/75" />
     </svg>
   );
 }
