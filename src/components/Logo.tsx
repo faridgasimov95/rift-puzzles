@@ -3,6 +3,14 @@ import { useId } from "react";
 type LogoProps = {
   className?: string;
 };
+const circleCoords = [
+  { cx: 50, cy: 8 },
+  { cx: 87, cy: 29 },
+  { cx: 87, cy: 71 },
+  { cx: 50, cy: 92 },
+  { cx: 13, cy: 71 },
+  { cx: 13, cy: 29 },
+];
 
 export default function Logo({ className }: LogoProps) {
   const baseId = useId().replace(/[^a-zA-Z0-9]/g, "");
@@ -73,48 +81,15 @@ export default function Logo({ className }: LogoProps) {
         strokeWidth={1.5}
       />
 
-      <circle
-        cx="50"
-        cy="8"
-        r="3"
-        className=" fill-gold-light"
-        strokeWidth="1"
-      />
-      <circle
-        cx="87"
-        cy="29"
-        r="3"
-        className=" fill-gold-light"
-        strokeWidth="1"
-      />
-      <circle
-        cx="87"
-        cy="71"
-        r="3"
-        className=" fill-gold-light"
-        strokeWidth="1"
-      />
-      <circle
-        cx="50"
-        cy="92"
-        r="3"
-        className=" fill-gold-light"
-        strokeWidth="1"
-      />
-      <circle
-        cx="13"
-        cy="71"
-        r="3"
-        className=" fill-gold-light"
-        strokeWidth="1"
-      />
-      <circle
-        cx="13"
-        cy="29"
-        r="3"
-        className=" fill-gold-light"
-        strokeWidth="1"
-      />
+      {circleCoords.map((val) => (
+        <circle
+          key={`${val.cx}-${val.cy}`}
+          cx={val.cx}
+          cy={val.cy}
+          r="3"
+          className="fill-gold-light"
+        />
+      ))}
 
       <circle
         cx="50"
@@ -122,7 +97,7 @@ export default function Logo({ className }: LogoProps) {
         r="18"
         className="fill-hextech"
         filter={`url(#${glowId})`}
-      ></circle>
+      />
       <polygon points="50,32 66,50 50,68 34,50" fill={`url(#${hextechId})`} />
       <polygon points="50,32 66,50 50,50" className="fill-hextech-light/75" />
     </svg>
