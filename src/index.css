@@ -1,5 +1,34 @@
 @import "tailwindcss";
 
+@keyframes goldring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes hexring {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes diamond {
+  50% {
+    opacity: 0.55;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 @theme {
   --color-hex-950: #010a13;
   --color-hex-900: #0a1428;
@@ -10,6 +39,10 @@
   --color-hextech: #0ac8b9;
   --color-hextech-light: #5ff2e6;
   --color-hextech-dark: #0a8f86;
+
+  --animate-goldring: goldring 4s linear infinite;
+  --animate-hexring: hexring 6s linear infinite;
+  --animate-diamond: diamond 2s ease-in-out infinite;
 }
 
 body {

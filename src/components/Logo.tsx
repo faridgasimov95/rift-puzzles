@@ -71,13 +71,13 @@ export default function Logo({ className }: LogoProps) {
       <polygon
         points="50,17 78.6,33.5 78.6,66.5 50,83 21.4,66.5 21.4,33.5"
         strokeDasharray="3 4"
-        className="stroke-hextech"
+        className="origin-center stroke-hextech animate-hexring"
         strokeWidth={1.5}
       />
 
       <polygon
         points="50,21 75.1,35.5 75.1,64.5 50,79 24.9,64.5 24.9,35.5"
-        className="stroke-gold-dark"
+        className="origin-center stroke-gold-dark animate-goldring"
         strokeWidth={1.5}
       />
 
@@ -98,8 +98,10 @@ export default function Logo({ className }: LogoProps) {
         className="fill-hextech"
         filter={`url(#${glowId})`}
       />
-      <polygon points="50,32 66,50 50,68 34,50" fill={`url(#${hextechId})`} />
-      <polygon points="50,32 66,50 50,50" className="fill-hextech-light/75" />
+      <g className="origin-center animate-diamond">
+        <polygon points="50,32 66,50 50,68 34,50" fill={`url(#${hextechId})`} />
+        <polygon points="50,32 66,50 50,50" className="fill-hextech-light/75" />
+      </g>
     </svg>
   );
 }
