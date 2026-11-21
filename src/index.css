@@ -1,31 +1,40 @@
 @import "tailwindcss";
 
-@keyframes goldring {
-  0% {
-    transform: rotate(0deg);
-  }
+@keyframes ring-spin {
   100% {
     transform: rotate(360deg);
   }
 }
 
-@keyframes hexring {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes diamond {
+@keyframes diamond-pulse {
   50% {
     opacity: 0.55;
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes glow-pulse {
+  50% {
+    opacity: 0.55;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes dot-twinkle {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
   }
 }
 
@@ -40,9 +49,11 @@
   --color-hextech-light: #5ff2e6;
   --color-hextech-dark: #0a8f86;
 
-  --animate-goldring: goldring 4s linear infinite;
-  --animate-hexring: hexring 6s linear infinite;
-  --animate-diamond: diamond 2s ease-in-out infinite;
+  --animate-goldring: ring-spin 16s linear infinite;
+  --animate-hexring: ring-spin 20s linear reverse infinite;
+  --animate-diamond: diamond-pulse 2s ease-in-out infinite;
+  --animate-glow: glow-pulse 4s ease-in-out infinite;
+  --animate-twinkle: dot-twinkle 2.4s ease-in-out infinite;
 }
 
 body {

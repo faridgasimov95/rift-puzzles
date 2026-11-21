@@ -71,23 +71,24 @@ export default function Logo({ className }: LogoProps) {
       <polygon
         points="50,17 78.6,33.5 78.6,66.5 50,83 21.4,66.5 21.4,33.5"
         strokeDasharray="3 4"
-        className="origin-center stroke-hextech animate-hexring"
+        className="origin-center stroke-hextech animate-hexring motion-reduce:animate-none"
         strokeWidth={1.5}
       />
 
       <polygon
         points="50,21 75.1,35.5 75.1,64.5 50,79 24.9,64.5 24.9,35.5"
-        className="origin-center stroke-gold-dark animate-goldring"
+        className="origin-center stroke-gold-dark animate-goldring motion-reduce:animate-none"
         strokeWidth={1.5}
       />
 
-      {circleCoords.map((val) => (
+      {circleCoords.map((val, i) => (
         <circle
           key={`${val.cx}-${val.cy}`}
           cx={val.cx}
           cy={val.cy}
-          r="3"
-          className="fill-gold-light"
+          r="4"
+          className="fill-gold-light animate-twinkle"
+          style={{ animationDelay: `${(i - 5) * 0.4}s` }}
         />
       ))}
 
@@ -95,10 +96,10 @@ export default function Logo({ className }: LogoProps) {
         cx="50"
         cy="50"
         r="18"
-        className="fill-hextech"
+        className="fill-hextech origin-center animate-glow motion-reduce:animate-none"
         filter={`url(#${glowId})`}
       />
-      <g className="origin-center animate-diamond">
+      <g className="origin-center animate-diamond motion-reduce:animate-none">
         <polygon points="50,32 66,50 50,68 34,50" fill={`url(#${hextechId})`} />
         <polygon points="50,32 66,50 50,50" className="fill-hextech-light/75" />
       </g>
